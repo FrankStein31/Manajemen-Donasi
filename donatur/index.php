@@ -106,9 +106,14 @@ if (isset($_GET['tanggal_awal']) && isset($_GET['tanggal_akhir'])) {
                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTambah">
                         <i class="fas fa-plus me-2"></i>Tambah Donatur
                     </button>
-                    <a href="export.php<?= isset($_GET['keyword']) ? '?keyword='.$_GET['keyword'] : '' ?><?= isset($_GET['tanggal_awal']) ? (isset($_GET['keyword']) ? '&' : '?').'tanggal_awal='.$_GET['tanggal_awal'] : '' ?><?= isset($_GET['tanggal_akhir']) ? '&tanggal_akhir='.$_GET['tanggal_akhir'] : '' ?>" class="btn btn-success">
-                        <i class="fas fa-file-excel me-2"></i>Export Excel
-                    </a>
+                    <div class="d-flex gap-2">
+                        <a href="export.php<?= isset($_GET['keyword']) ? '?keyword='.$_GET['keyword'] : '' ?><?= isset($_GET['tanggal_awal']) ? (isset($_GET['keyword']) ? '&' : '?').'tanggal_awal='.$_GET['tanggal_awal'] : '' ?><?= isset($_GET['tanggal_akhir']) ? '&tanggal_akhir='.$_GET['tanggal_akhir'] : '' ?>" class="btn btn-success">
+                            <i class="fas fa-file-excel me-2"></i>Export Excel
+                        </a>
+                        <a href="export_pdf.php<?= isset($_GET['keyword']) ? '?keyword='.$_GET['keyword'] : '' ?><?= isset($_GET['tanggal_awal']) ? (isset($_GET['keyword']) ? '&' : '?').'tanggal_awal='.$_GET['tanggal_awal'] : '' ?><?= isset($_GET['tanggal_akhir']) ? '&tanggal_akhir='.$_GET['tanggal_akhir'] : '' ?>" class="btn btn-danger">
+                            <i class="fas fa-file-pdf me-2"></i>Export PDF
+                        </a>
+                    </div>
                 </div>
 
                 <div class="card fade-in">
